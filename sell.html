@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Sell</title>
+    <link rel="stylesheet" href="./public/Contact-Form-Clean.css" />
+  </head>
+
+  <body>
+    <section class="contact-clean">
+      <form action="submitform" method="post">
+        <h2 class="text-center">Seller Form</h2>
+        <div class="mb-3">
+          <label for="prodCategory">Product category</label>
+          <select id="prodCategory" name="prodCategory">
+            <option value="electronics">Electronics</option>
+            <option value="utilities">Utilities</option>
+            <option value="appliances">Appliances</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input
+            class="form-control"
+            type="text"
+            name="product"
+            placeholder="Product"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            class="form-control"
+            type="number"
+            name="price"
+            placeholder="Price"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            name="description"
+            placeholder="Description"
+            rows="14"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit">send</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
