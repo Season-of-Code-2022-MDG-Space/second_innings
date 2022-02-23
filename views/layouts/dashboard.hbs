@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,28 +13,13 @@
     <div class="sellerlist">
       <table border="9">
         <tr>
-          <th>S. No</th>
-          <th>Enrollment no</th>
-          <th>Name</th>
-          <th>Year</th>
+
           <th>Product Category</th>
           <th>Product</th>
           <th>Price</th>
           <th>Add to wishlist</th>
         </tr>
-        <% sellerlist.forEach(function(sellerlist){ %>
-        <tr>
-          <td><%=i; %></td>
-          <td><%=sellerlist.enrollmentNumber %></td>
-          <td><%=person.name %></td>
-          <td><%=person.year %></td>
-          <td><%=sellerlist.prodCategory %></td>
-          <td><%=sellerlist.product %></td>
-          <td><%=sellerlist.price %></td>
-          <td><a href="#">Add to wishlist</a></td>
-        </tr>
-
-        <% } %>
+          {{{body}}}
       </table>
     </div>
 
