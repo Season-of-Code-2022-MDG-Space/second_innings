@@ -8,7 +8,7 @@ channeli = () => {
     .replace("?code", "");
 
   const grant_type = "authorization_code";
-  const redirect_uri = "http://localhost:8080/";
+  const redirect_uri = "http://localhost:8080/dashboard";
 
   const data =
     "client_id=" +

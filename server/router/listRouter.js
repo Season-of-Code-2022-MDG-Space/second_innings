@@ -22,12 +22,8 @@ router.post("/", function (req, res) {
     if (err) throw err;
     console.log("Success!");
     console.log(result);
-    res.sendFile("D:/Git/MDG SoC/submitform.html") //static path
+    res.sendFile("D:/Git/MDG SoC/submitform.html"); //static path
   });
-
 });
 
 module.exports = router;
-router.get("/", (req, res) => {
-  res.sendFile(__dirname + "/submitform.html");
-});
