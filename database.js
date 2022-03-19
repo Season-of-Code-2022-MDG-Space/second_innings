@@ -13,7 +13,7 @@ var con = mysql.createPool({
 
 con.getConnection((err, connection) => {
   if (err) throw err;
-  console.log(`Database connected succesfully`);
+  console.log(`Database connected succesfully 1`);
   connection.release(error => error ? reject(error) : resolve());
 });
 

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const con = require("D:/Git/MDG SoC/database.js"); //static path, needed to update at time of deployment
-
+const con = require("../../database");
 router.post("/", function (req, res) {
   console.log(req.body.prodCategory);
   console.log(req.body.product);
@@ -22,7 +21,7 @@ router.post("/", function (req, res) {
     if (err) throw err;
     console.log("Success!");
     console.log(result);
-    res.sendFile("D:/Git/MDG SoC/submitform.html"); //static path
+    res.sendFile("../../submitform"); 
   });
 });
 

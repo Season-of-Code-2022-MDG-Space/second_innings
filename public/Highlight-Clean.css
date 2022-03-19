@@ -61,10 +61,4 @@
   width: 40vw;
 }
 
-body {
-  background: linear-gradient(
-    0deg,
-    rgba(71, 43, 186, 1) 0%,
-    rgba(44, 25, 121, 1) 100%
-  );
-}
+

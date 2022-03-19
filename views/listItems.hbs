@@ -1,0 +1,14 @@
+{{#each data}}
+
+  <tr>
+    <td>{{this.prodCategory}}</td>
+    <td>{{this.product}}</td>
+    <td>{{this.price}}</td>
+    <td>{{this.timestamp}}</td>
+    <td><button
+        onclick="window.location='/dashboard/listings/sold';"
+      >Sold</button></td>
+
+  </tr>
+
+{{/each}}

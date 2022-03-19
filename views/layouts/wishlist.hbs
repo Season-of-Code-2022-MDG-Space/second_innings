@@ -6,10 +6,10 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min2.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/Navigation-Clean.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min2.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
 
   <body
@@ -37,7 +37,7 @@
               <a class="nav-link" href="/dashboard/listings">Your listings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dashboard/wishlist">Wishlist</a>
+              <a class="nav-link active" href="/dashboard/wishlist">Wishlist</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Cart</a>
@@ -47,38 +47,7 @@
       </div>
     </nav>
     <br />
-    <nav class="navbar navbar-light navbar-expand-md">
-      <div class="container-fluid" style="background-color: white;">
-        <p class="filters"><b>Filters</b></p>
-        <button
-          data-bs-toggle="collapse"
-          class="navbar-toggler"
-          data-bs-target="#navcol-1"
-        >
-          <span class="visually-hidden">Toggle navigation</span><span
-            class="navbar-toggler-icon"
-          ></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-          <ul class="navbar-nav">
-            <li class="checkbox">
-              <input type="radio" />Electronics
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Utilities
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Appliances
-            </li>
-          </ul>
-          <button class="filter-btn">Apply</button>
-        </div>
-        Want to sell something?
-        <button class="seller-btn" onclick="window.location='/form';">
-          Seller form
-        </button>
-      </div>
-    </nav>
+
     <br />
     <div
       class="table-responsive"
@@ -96,10 +65,12 @@
           <table class="table">
             <thead>
               <tr>
+                <th>Enrolment Number</th>
                 <th>Product Category</th>
                 <th>Product</th>
                 <th>Price</th>
-                <th></th>
+                <th>Timestamp</th>
+                <th>add</th>
               </tr>
             </thead>
             {{{body}}}

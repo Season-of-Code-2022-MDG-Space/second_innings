@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="./public/Login-Form-Clean.css" />
     <link rel="stylesheet" href="./public/styles.css" />
   </head>
-
   <body>
     <section class="highlight-clean">
       <h1 class="text-center"><b>Second Innings</b></h1>
@@ -31,36 +30,32 @@
             ><input
               class="form-control"
               type="number"
-              name="number"
-              placeholder="Enrollment Number"
+              name="reqenrolnum"
+              id="number"
+              placeholder="Enrolment Number"
             /><input
               class="form-control"
               type="password"
-              name="password"
+              name="reqpassword"
+              id="password"
               placeholder="Password"
             />
-          </div>
-         
-        
+          </div>                
         <div class="intro"></div>
         <div class="buttons">
-            <input type="submit" class="btn btn-primary" role="button" value="SIGN IN"></a>
-           
+            <input type="submit" class="btn btn-primary" role="button" onclick="savetolocal()" value="SIGN IN"></a>          
         </form>
-        <button onclick="redirect()" class="btn btn-light" type="button"> CHANNEL I</button>
-        
-          
-        </div>
-      </div>
+        <form method="get" action="/oauth/channeli">
+        <button class="btn btn-light" type="submit"> CHANNEL I</button>
+      </form>
+        </div>          
+        </div>      
       <p class="text-center">
         <br />First-timers, please log in using Channeli credentials by clicking
         the Channeli button.<br /><br />
       </p>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script type="text/javascript" src="./Resources/index.js"></script>
-    <script src="./Resources/dashboard.js"></script>
-    
+    <script src="./Resources/storage.js"></script>    
   </body>
 </html>

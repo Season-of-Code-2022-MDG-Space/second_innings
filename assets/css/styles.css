@@ -1,0 +1,56 @@
+.table-responsive {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  padding: 20px;
+}
+
+.seller-btn {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(221, 226, 150, 0.582);
+  border-radius: 10px;
+}
+
+.seller-btn:hover {
+  background-color: rgba(235, 241, 144, 0.582);
+}
+
+.filters {
+  font-size: 20px;
+  padding-top: 13px;
+  padding-right: 100px;
+  padding-left: 40px;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(135, 162, 202, 0.582);
+  border-radius: 10px;
+}
+
+.cart-btn {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(80, 77, 243, 0.829);
+  border-radius: 10px;
+}
+
+.wish-btn {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(135, 162, 202, 0.582);
+  border-radius: 10px;
+}
+
+.wish-btn:hover {
+  background-color: rgba(155, 176, 206, 0.582);
+}
+.cart-btn:hover {
+  background-color: rgba(102, 99, 238, 0.829);
+}

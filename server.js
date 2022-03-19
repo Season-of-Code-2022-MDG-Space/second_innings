@@ -7,8 +7,8 @@ const listRouter = require("./server/router/listRouter.js");
 const sellerRouter = require("./server/router/sellerRouter.js");
 const signinRouter = require("./server/router/signinRouter.js");
 const formRouter = require("./server/router/formRouter.js");
+const oauth = require("./oauth.js");
 
-const oauth = require("./Resources/index.js");
 const database = require("./database.js");
 const form = require("./Resources/form.js");
 
@@ -27,7 +27,8 @@ app.use("/submitform", listRouter);
 app.use("/dashboard", sellerRouter);
 app.use("/signin", signinRouter);
 app.use("/form", formRouter);
+app.use("/oauth", oauth);
 
 app.listen(8080);
 
-console.log("running");
+console.log("listening on port 8080");

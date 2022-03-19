@@ -1,14 +1,12 @@
 {{#each data}}
 
   <tr>
+    <td>{{this.enrollmentNumber}}</td>
     <td>{{this.prodCategory}}</td>
     <td>{{this.product}}</td>
     <td>{{this.price}}</td>
-    <td>
-      <button class="info-btn" onclick="window.location='/dashboard/info';">
-        More info
-      </button>
-    </td>
+    <td>{{this.timestamp}}</td>
+    <td><button>Add to cart</button></td>
 
   </tr>
 

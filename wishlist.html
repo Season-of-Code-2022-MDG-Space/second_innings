@@ -13,23 +13,24 @@
   </head>
 
   <body
-    style=" background: linear-gradient(
-      0deg,
-      rgba(71, 43, 186, 1) 0%,
-      rgba(44, 25, 121, 1) 100%
-    );"
+    style="
+      background: linear-gradient(
+        0deg,
+        rgba(71, 43, 186, 1) 0%,
+        rgba(44, 25, 121, 1) 100%
+      );
+    "
   >
-
     <nav class="navbar navbar-light navbar-expand-lg navigation-clean">
       <div class="container">
-        <a class="navbar-brand" href="/dashboard">Second Innings</a><button
+        <a class="navbar-brand" href="/dashboard">Second Innings</a
+        ><button
           data-bs-toggle="collapse"
           class="navbar-toggler"
           data-bs-target="#navcol-2"
         >
-          <span class="visually-hidden">Toggle navigation</span><span
-            class="navbar-toggler-icon"
-          ></span>
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-2">
           <ul class="navbar-nav ms-auto">
@@ -48,30 +49,22 @@
     </nav>
     <br />
     <nav class="navbar navbar-light navbar-expand-md">
-      <div class="container-fluid" style="background-color: white;">
+      <div class="container-fluid" style="background-color: white">
         <p class="filters"><b>Filters</b></p>
         <button
           data-bs-toggle="collapse"
           class="navbar-toggler"
           data-bs-target="#navcol-1"
         >
-          <span class="visually-hidden">Toggle navigation</span><span
-            class="navbar-toggler-icon"
-          ></span>
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
           <ul class="navbar-nav">
-            <li class="checkbox">
-              <input type="radio" />Electronics
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Utilities
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Appliances
-            </li>
+            <li class="checkbox"><input type="checkbox" />Electronics</li>
+            <li class="checkbox"><input type="checkbox" />Utilities</li>
+            <li class="checkbox"><input type="checkbox" />Appliances</li>
           </ul>
-          <button class="filter-btn">Apply</button>
         </div>
         Want to sell something?
         <button class="seller-btn" onclick="window.location='/form';">
@@ -96,13 +89,14 @@
           <table class="table">
             <thead>
               <tr>
+                <th>Enrolment Number</th>
                 <th>Product Category</th>
                 <th>Product</th>
                 <th>Price</th>
+                <th>Timestamp</th>
                 <th></th>
               </tr>
             </thead>
-            {{{body}}}
           </table>
         </div>
       </div>
