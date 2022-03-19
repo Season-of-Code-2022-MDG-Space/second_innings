@@ -10,5 +10,5 @@
 
 ## Mentors
 
--[Srinjoy Ghosh](https://github.com/srinjoyghosh-bot)
+- [Srinjoy Ghosh](https://github.com/srinjoyghosh-bot)
 - [Madhur] 
