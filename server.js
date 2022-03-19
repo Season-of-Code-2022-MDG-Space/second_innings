@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 var multer = require("multer");
+const session = require("express-session");
+const cookie = require("cookie-parser");
 const exphbs = require("express-handlebars");
 const app = express();
 const listRouter = require("./server/router/listRouter.js");
@@ -23,6 +25,27 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname));
 
+app.use(cookie());
+
+// const cors = require("cors");
+// app.use(cors());
+
+app.use(
+  session({
+    name: process.env.SESS_NAME,
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SESS_SECRET,
+    cookie: {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24, //1 day
+    },
+  })
+);
+
+app.use("/allow", (req, res) => {
+  res.send("Unauthorized!");
+});
 app.use("/submitform", listRouter);
 app.use("/dashboard", sellerRouter);
 app.use("/signin", signinRouter);

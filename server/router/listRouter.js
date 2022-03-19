@@ -1,14 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const con = require("../../database");
+
 router.post("/", function (req, res) {
   console.log(req.body.prodCategory);
   console.log(req.body.product);
   console.log(req.body.price);
   console.log(req.body.description);
 
+  var z = req.session.eno;
+
   var sql =
-    "INSERT INTO sellerlist ( prodCategory, product, price, description) VALUES (" +
+    "INSERT INTO sellerlist ( enrollmentNumber, prodCategory, product, price, description) VALUES (" +
+    con.escape(z) +
+    "," +
     con.escape(req.body.prodCategory) +
     "," +
     con.escape(req.body.product) +
@@ -21,7 +26,7 @@ router.post("/", function (req, res) {
     if (err) throw err;
     console.log("Success!");
     console.log(result);
-    res.sendFile("../../submitform"); 
+    res.render("submitform.html");
   });
 });
 

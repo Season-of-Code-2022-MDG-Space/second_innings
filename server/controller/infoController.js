@@ -16,4 +16,7 @@ exports.showInfo = (req, res, next) => {
 
 exports.wishlist = (req, res) => {
   //add to table if not already added
+  res.render("wishItems", {
+    layout: "wishlist", //, data:data
+  });
 };

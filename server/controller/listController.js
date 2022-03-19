@@ -7,8 +7,11 @@ const db = require("../../database");
 
 exports.listView = (req, res) => {
   //res.send("Your listings");
-
-  var sql = "SELECT prodCategory, product, price, timestamp FROM sellerlist ";
+  var y = req.session.eno;
+  console.log(y);
+  var sql =
+    "SELECT prodCategory, product, price, timestamp FROM sellerlist WHERE enrollmentNumber = " +
+    db.escape(y);
   db.query(sql, function (err, data, fields) {
     if (err) throw err;
     res.render("listItems", { layout: "listings", data: data });
@@ -16,6 +19,7 @@ exports.listView = (req, res) => {
 };
 
 exports.sold = (req, res) => {
+  var a = req.session.eno;
   //var sql = "DELETE FROM sellerlist [WHERE enrollmentNumber=]"
 
   var sql = "SELECT prodCategory, product, price, timestamp FROM sellerlist ";

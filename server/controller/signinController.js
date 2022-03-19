@@ -3,6 +3,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const db = require("../../database");
+const bcrypt = require("bcrypt");
 
 exports.viewsignin = (req, res) => {
   res.sendFile("D:/Git/Second-Innings/index.html"); //static
@@ -24,8 +25,9 @@ exports.postsignin = (req, res) => {
           if (1) {
             console.log("login successful");
             //req.session.userinfo = rows[0].email_id; //session
+            req.session.eno = rows[0].enrollmentNumber; //session
 
-             res.redirect("/dashboard");
+            res.redirect("/dashboard");
           } else {
             res.send("Incorrect Enrolment number or password");
           }
@@ -45,10 +47,6 @@ exports.logout = (req, res) => {
       return res.redirect("/signin");
     }
     res.clearCookie(process.env.SESS_NAME);
-    res.redirect("/");
+    res.redirect("/signin");
   });
 };
-
-//exports.personID = personID;
-//export default personID;
-//module.exports = personID;
