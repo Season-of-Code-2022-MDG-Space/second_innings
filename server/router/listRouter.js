@@ -26,7 +26,7 @@ router.post("/", function (req, res) {
     if (err) throw err;
     console.log("Success!");
     console.log(result);
-    res.render("submitform.html");
+    res.sendFile("submitform.html", { root: "." });
   });
 });
 

@@ -6,10 +6,10 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css" />
-    
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/Navigation-Clean.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
   </head>
 
   <body
@@ -60,18 +60,8 @@
           ></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
-          <ul class="navbar-nav">
-            <li class="checkbox">
-              <input type="radio" />Electronics
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Utilities
-            </li>
-            <li class="checkbox">
-              <input type="radio" />Appliances
-            </li>
-          </ul>
-          <button class="filter-btn">Apply</button>
+          <button class="filter-btn" onclick="filter()">Category</button>
+          <button class="filter-btn">Price</button>
         </div>
         Want to sell something?
         <button class="seller-btn" onclick="window.location='/form';">
@@ -115,5 +105,8 @@
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min2.js"></script>
+    <script src="/Resources/filter.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

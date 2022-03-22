@@ -1,6 +1,6 @@
 {{#each data}}
 
-  <tr>
+  <tr id={{this.prodID}}>
     <td>{{this.prodCategory}}</td>
     <td>{{this.product}}</td>
     <td>{{this.price}}</td>
@@ -9,7 +9,6 @@
         More info
       </button>
     </td>
-
   </tr>
 
 {{/each}}

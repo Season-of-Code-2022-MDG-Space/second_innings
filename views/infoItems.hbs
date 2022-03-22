@@ -1,0 +1,35 @@
+{{#each data}}
+
+  <div class="col-sm-6 col-md-5 col-lg-4 item box-1">
+    <div class="box"><i class="fa fa-list-alt icon"></i>
+      <h3 class="name">Know more</h3>
+      <ul class="description">
+        <li>Category: {{this.prodCategory}}</li>
+        <li>Product: {{this.product}}</li>
+        <li>Price: {{this.price}}</li>
+        <li>Description: {{this.description}}</li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-5 col-lg-4 item box-2">
+    <div class="box"><i class="fa fa-group icon"></i>
+      <h3 class="name">About the seller</h3>
+      <ul class="description">
+        <li>Name: {{this.name}}</li>
+        <li>Branch: {{this.branch}}</li>
+        <li>Year: {{this.year}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-5 col-lg-4 item box-3">
+    <div class="box"><i class="fa fa-phone icon"></i>
+      <h3 class="name">Contact</h3>
+      <ul class="description">
+        <li>Email: {{this.email}}</li>
+      </ul>
+      <button>Chat</button>
+    </div>
+  </div>
+
+{{/each}}

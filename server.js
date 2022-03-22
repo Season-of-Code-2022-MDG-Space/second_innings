@@ -43,9 +43,6 @@ app.use(
   })
 );
 
-app.use("/allow", (req, res) => {
-  res.send("Unauthorized!");
-});
 app.use("/submitform", listRouter);
 app.use("/dashboard", sellerRouter);
 app.use("/signin", signinRouter);

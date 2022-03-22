@@ -5,14 +5,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 exports.dashboardview = (req, res, next) => {
-  if (req.session.eno) {
-    var sql = "SELECT prodCategory, product, price FROM sellerlist";
-    db.query(sql, function (err, data, fields) {
-      if (err) throw err;
-      //console.log(data);
-      res.render("items", { layout: "dashboard", data: data });
-    });
-  } else {
-    res.render("/allow");
-  }
+  var sql = "SELECT prodID, prodCategory, product, price FROM sellerlist";
+  db.query(sql, function (err, data, fields) {
+    if (err) throw err;
+    //console.log(data);
+    res.render("items", { layout: "dashboard", data: data });
+  });
 };
