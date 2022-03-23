@@ -1,8 +1,6 @@
 const express = require("express");
 const db = require("../../database");
 const app = express();
-const session = require("express-session");
-const cookie = require("cookie-parser");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 let bool = 0;
@@ -24,19 +22,18 @@ exports.showInfo = (req, res, next) => {
   }
 };
 
-// exports.wishlist = (req, res) => {
-//   //add to table if not already added
-//   res.render("wishItems", {
-//     layout: "wishlist", //, data:data
-//   });
-// };
+exports.wishlist = (req, res) => {
+  //add to table if not already added
+  res.render("wishItems", {
+    layout: "wishlist", //, data:data
+  });
+};
 
 //posting
 exports.postprod = (req, res) => {
   const { prodID } = req.body;
   console.log(prodID);
   postprodID = prodID;
-  req.session.prodID = prodID;
   bool = 1;
   res.end();
 };

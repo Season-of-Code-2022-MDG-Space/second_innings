@@ -10,6 +10,8 @@ const sellerRouter = require("./server/router/sellerRouter.js");
 const signinRouter = require("./server/router/signinRouter.js");
 const formRouter = require("./server/router/formRouter.js");
 const oauth = require("./oauth.js");
+const cors = require("cors");
+app.use(cors());
 
 const database = require("./database.js");
 const form = require("./Resources/form.js");
@@ -43,11 +45,7 @@ app.use(
   })
 );
 
-app.get("/roomid", (req, res) => {
-  const { eno, prodID } = req.session;
 
-  res.json({ name: eno, room: prodID });
-});
 
 app.use("/submitform", listRouter);
 app.use("/dashboard", sellerRouter);

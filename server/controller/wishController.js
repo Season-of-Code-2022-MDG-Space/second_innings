@@ -53,9 +53,12 @@ exports.savewish = (req, res) => {
 };
 
 exports.wishlist = (req, res) => {
-  var sql =
-    "SELECT sellerlist.enrollmentNumber, sellerlist.product, sellerlist.price FROM sellerlist INNER JOIN wishlist ON sellerlist.enrollmentNumber = wishlist.enrollmentNumber WHERE wishlist.enrollmentNumber =" +
-    db.escape(req.session.eno) ;
+  // var sql =
+  //   "SELECT sellerlist.enrollmentNumber, sellerlist.product, sellerlist.price FROM sellerlist INNER JOIN wishlist ON sellerlist.enrollmentNumber = wishlist.enrollmentNumber WHERE wishlist.enrollmentNumber =" +
+  //   db.escape(req.session.eno) ;
+
+var sql= 
+"SELECT * from sellerlist where prodID= 27"
 
   db.query(sql, function (err, result) {
     if (err) throw err;

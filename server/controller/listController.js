@@ -28,3 +28,13 @@ exports.sold = (req, res) => {
     res.render("listItems", { layout: "listings", data: data });
   });
 };
+
+exports.chat = (req, res) => {
+  let data = {};
+  //const eno = req.session.eno;
+  console.log(req.session.eno);
+  data["name"] = eno;
+
+  data["room"] = prodID;
+  res.json(data);
+};

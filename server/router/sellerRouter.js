@@ -9,12 +9,12 @@ const filterController = require("../controller/filterController");
 
 router.get("/", sellerlistcontroller.dashboardview);
 router.get("/wishlist", wishController.wishlist);
-router.post("/wishpost", wishController.postwish);
 router.get("/listings", listController.listView);
 router.get("/info", infoController.showInfo);
-router.post("/infopost", infoController.postprod);
 router.get("/listings/sold", listController.sold);
+router.get("/info/wishlist", infoController.wishlist);
 router.post("/filters", filterController.filter);
 router.get("/renderfilters", filterController.filterender);
-
+router.post("/infopost", infoController.postprod);
+router.get("/chat", listController.chat);
 module.exports = router;

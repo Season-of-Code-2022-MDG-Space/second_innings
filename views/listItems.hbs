@@ -5,9 +5,7 @@
     <td>{{this.product}}</td>
     <td>{{this.price}}</td>
     <td>{{this.timestamp}}</td>
-    <td><button
-        onclick="window.location='/dashboard/listings/sold';"
-      >Sold</button></td>
+    <td><button id="sold-btn" onclick="getId({{this.prodID}})">Sold</button></td>
 
   </tr>
 
