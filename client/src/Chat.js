@@ -37,7 +37,7 @@ function Chat({socket, username, room }) {
             <div className="chat-header">
                 <p>Contact Name(db se import)</p>
             </div>
-            <div className="chat-body">
+            <div className="chat-body"> 
                 <ScrollToBottom className = "message-container">
                 {msgList.map((messageContent) =>{
                   return <div className="message"

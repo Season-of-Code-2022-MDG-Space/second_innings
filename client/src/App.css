@@ -52,17 +52,17 @@ body {
 }
 
 .chat-window {
-  width: 300px;
-  height: 420px;
+  width: 420px;
+  height: 400px;
 }
 
 .chat-window p {
   margin: 0;
 }
 .chat-window .chat-header {
-  height: 45px;
-  border-radius: 6px;
-  background: #263238;
+  height: 60px;
+  border-radius: 5px;
+  background: #0d1113;
   position: relative;
   cursor: pointer;
 }
@@ -71,12 +71,12 @@ body {
   padding: 0 1em 0 2em;
   color: #fff;
   font-weight: 700;
-  line-height: 45px;
+  line-height: 75px;
 }
 
 .chat-window .chat-body {
   height: calc(450px - (45px + 70px));
-  border: 1px solid #263238;
+  border: 1px solid #0d1113;
   background: #fff;
 
   position: relative;
@@ -100,10 +100,10 @@ body {
 .chat-window .chat-body .message .message-content {
   width: auto;
   height: auto;
-  min-height: 40px;
-  max-width: 120px;
+  min-height: 65px;
+  max-width: 200px;
   background-color: #43a047;
-  border-radius: 5px;
+  border-radius: 7px;
   color: white;
   display: flex;
   align-items: center;
@@ -181,11 +181,11 @@ body {
   background: transparent;
   outline: none;
   font-size: 25px;
-  color: lightgray;
+  color: #43a047;
 }
 
 .chat-window .chat-footer button:hover {
-  color: #43a047;
+  color: #050c06;
 }
 .hide {
   opacity: 0 !important;
