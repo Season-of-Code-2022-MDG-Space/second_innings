@@ -43,6 +43,12 @@ app.use(
   })
 );
 
+app.get("/roomid", (req, res) => {
+  const { eno, prodID } = req.session;
+
+  res.json({ name: eno, room: prodID });
+});
+
 app.use("/submitform", listRouter);
 app.use("/dashboard", sellerRouter);
 app.use("/signin", signinRouter);

@@ -8,6 +8,13 @@
     />
     <title>Sell</title>
     <link rel="stylesheet" href="./public/Contact-Form-Clean.css" />
+    <style>
+      body {
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica,
+          Arial, sans-serif;
+      }
+    </style>
   </head>
 
   <body>
@@ -47,9 +54,17 @@
           ></textarea>
         </div>
         <div class="mb-3">
-          <button class="btn btn-primary" type="submit">send</button>
+          <button class="btn btn-primary" type="submit" onclick="formlisted()">
+            send
+          </button>
         </div>
       </form>
     </section>
   </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    function formlisted() {
+      Swal.fire("Successful", "Your item has been listed ", "success");
+    }
+  </script>
 </html>

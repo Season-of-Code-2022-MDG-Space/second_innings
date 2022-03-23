@@ -8,7 +8,7 @@ const db = require("./database");
 const con = require("./database");
 require("dotenv").config();
 
-var a = 0;
+//var a = 0;
 
 router.get("/", (req, res) => {
   return res.sendFile("./submitform");
@@ -26,13 +26,20 @@ router.get(
     // Successful authentication, redirect home.
     console.log("Success");
 
-    if (a) {
-      res.send("Set a password");
-    } else {
-      res.redirect("/dashboard");
-    }
+    res.redirect("/dashboard");
+
+    // if (a) {
+    //   res.sendFile("password.html", { root: "." });
+    // } else {
+    //   res.redirect("/dashboard");
+    // }
   }
 );
+
+// getenr = (req, res) => {
+//   req.session.enum = rows[0].reqenrollment_number; //session
+//   console.log(req.session.enum);
+// };
 
 passport.use(
   new OAuth2Strategy(
@@ -61,7 +68,7 @@ passport.use(
           const reqyear = data.student.currentYear;
           const reqemail_id = data.contactInformation.instituteWebmailAddress;
 
-          //exports.useenrolnum = reqenrollment_number;
+          // getenr();
 
           db.query(
             "SELECT * FROM person WHERE enrollmentNumber=" +
@@ -69,7 +76,7 @@ passport.use(
             (err, rows) => {
               if (!err) {
                 if (rows[0] === undefined) {
-                  a = 1;
+                 // a = 1;
                   db.query(
                     "INSERT INTO person ( enrollmentNumber, name, degree, branch, year, email) VALUES (" +
                       con.escape(reqenrollment_number) +

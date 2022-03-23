@@ -24,7 +24,7 @@ exports.postsignin = (req, res) => {
           //const verified = bcrypt.compareSync(reqpassword, rows[0]["password"]);
           if (1) {
             console.log("login successful");
-            //req.session.userinfo = rows[0].email_id; //session
+            
             req.session.eno = rows[0].enrollmentNumber; //session
 
             res.redirect("/dashboard");
